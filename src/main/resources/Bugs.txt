@@ -1,0 +1,3 @@
+1. When selecting another country different from Sweden, destination country it's by default Sweden (the only selectable one)
+2 We can use same postal code for origin and destination (Sweden) and it will be calculated
+3 There are duplicate of locators in DOM and for case sweden-sweden - locators will be found at index 1, while sweden-another country will be found at index 2
