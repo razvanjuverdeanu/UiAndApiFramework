@@ -51,12 +51,12 @@ public class HomePage {
         return basePage.getElementText(destinationPostcodeInput).isEmpty();
     }
 
-    public void setOriginCountryDropdownCountry(String originCountry) {
+    public void setOriginCountry(String originCountry) {
         basePage.scrollToElement(originCountryDropdown);
         basePage.setDropdownValue(originCountryDropdown, dropdownOriginCountryOptions, originCountry);
     }
 
-    public void setDestinationCountryDropdownCountry(String destinationCountry) {
+    public void setDestinationCountry(String destinationCountry) {
         basePage.setDropdownValue(destinationCountryDropdown, dropdownDestinationCountryOptions, destinationCountry);
     }
 

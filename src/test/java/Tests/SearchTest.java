@@ -55,11 +55,11 @@ public class SearchTest extends AbstractTestNGSpringContextTests {
         homePage.rejectCookies();
 
         String originPostalCode = getPostalCodeForGivenCountry(originCountry);
-        homePage.setOriginCountryDropdownCountry(originCountry);
+        homePage.setOriginCountry(originCountry);
         homePage.setOriginPostCode(originPostalCode);
 
         String destinationPostalCode = getPostalCodeForGivenCountry(destinationCountry);
-        homePage.setDestinationCountryDropdownCountry(destinationCountry);
+        homePage.setDestinationCountry(destinationCountry);
         homePage.setDestinationPostCode(destinationPostalCode);
 
         homePage.clickCalculate();
@@ -72,11 +72,11 @@ public class SearchTest extends AbstractTestNGSpringContextTests {
         homePage.rejectCookies();
 
         String originPostalCode = getPostalCodeForGivenCountry(originCountry);
-        homePage.setOriginCountryDropdownCountry(originCountry);
+        homePage.setOriginCountry(originCountry);
         homePage.setOriginPostCode(FIVE_SPACES + originPostalCode + FIVE_SPACES);
 
         String destinationPostalCode = getPostalCodeForGivenCountry(destinationCountry);
-        homePage.setDestinationCountryDropdownCountry(destinationCountry);
+        homePage.setDestinationCountry(destinationCountry);
         homePage.setDestinationPostCode(FIVE_SPACES + destinationPostalCode + FIVE_SPACES);
 
         homePage.clickCalculate();
@@ -88,10 +88,10 @@ public class SearchTest extends AbstractTestNGSpringContextTests {
     public void testLargeNumberPostcode(String originCountry, String destinationCountry) {
         homePage.rejectCookies();
 
-        homePage.setOriginCountryDropdownCountry(originCountry);
+        homePage.setOriginCountry(originCountry);
         homePage.setOriginPostCode(String.valueOf(new Random().nextInt(100000000, 999999999)));
 
-        homePage.setDestinationCountryDropdownCountry(destinationCountry);
+        homePage.setDestinationCountry(destinationCountry);
         homePage.setDestinationPostCode(String.valueOf(new Random().nextInt(100000000, 999999999)));
 
         homePage.clickCalculate();
@@ -103,9 +103,9 @@ public class SearchTest extends AbstractTestNGSpringContextTests {
     public void testEmptyPostCode(String originCountry, String destinationCountry) {
         homePage.rejectCookies();
 
-        homePage.setOriginCountryDropdownCountry(originCountry);
+        homePage.setOriginCountry(originCountry);
 
-        homePage.setDestinationCountryDropdownCountry(destinationCountry);
+        homePage.setDestinationCountry(destinationCountry);
 
         homePage.clickCalculate();
 
@@ -121,11 +121,11 @@ public class SearchTest extends AbstractTestNGSpringContextTests {
         homePage.rejectCookies();
 
         String originPostalCode = getPostalCodeForGivenCountry(originCountry);
-        homePage.setOriginCountryDropdownCountry(originCountry);
+        homePage.setOriginCountry(originCountry);
         homePage.setOriginPostCode(helper.getPostalCodeWithSpecialCharacters(originPostalCode));
 
         String destinationPostalCode = getPostalCodeForGivenCountry(destinationCountry);
-        homePage.setDestinationCountryDropdownCountry(destinationCountry);
+        homePage.setDestinationCountry(destinationCountry);
         homePage.setDestinationPostCode(helper.getPostalCodeWithSpecialCharacters(destinationPostalCode));
 
         homePage.clickCalculate();
