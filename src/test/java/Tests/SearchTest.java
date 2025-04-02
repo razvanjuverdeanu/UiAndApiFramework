@@ -26,6 +26,7 @@ public class SearchTest extends AbstractTestNGSpringContextTests {
 
     public static final String CORRECT_POSTAL_CODE_WARNING = "Correct postal code";
     public static final String UNABLE_TO_RETRIEVE = "Unfortunately the online tool is unable to retrieve data for the specified shipment";
+    public static final String FIVE_SPACES = "     ";
     @Autowired
     public HomePage homePage;
     @Autowired
@@ -72,11 +73,11 @@ public class SearchTest extends AbstractTestNGSpringContextTests {
 
         String originPostalCode = getPostalCodeForGivenCountry(originCountry);
         homePage.setOriginCountryDropdownCountry(originCountry);
-        homePage.setOriginPostCode("     " + originPostalCode + "     ");
+        homePage.setOriginPostCode(FIVE_SPACES + originPostalCode + FIVE_SPACES);
 
         String destinationPostalCode = getPostalCodeForGivenCountry(destinationCountry);
         homePage.setDestinationCountryDropdownCountry(destinationCountry);
-        homePage.setDestinationPostCode("     " + destinationPostalCode + "       ");
+        homePage.setDestinationPostCode(FIVE_SPACES + destinationPostalCode + FIVE_SPACES);
 
         homePage.clickCalculate();
 
